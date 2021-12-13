@@ -1,7 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+/3 React Piano/react-piano/node_modules
+/3 React Piano/react-piano/.vscode
 /.pnp
 .pnp.js
 
