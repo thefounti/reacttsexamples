@@ -3,6 +3,13 @@
 # dependencies
 /3 React Piano/react-piano/node_modules
 /3 React Piano/react-piano/.vscode
+/1 trello-clone/node_modules
+/1 trello-clone/.vscode
+/2 Testing Digital Goods Store/Completed/node_modules
+/2 Testing Digital Goods Store/Completed/.vscode
+/2 Testing Digital Goods Store/step1/node_modules
+/2 Testing Digital Goods Store/step1/.vscode
+
 /.pnp
 .pnp.js
 
