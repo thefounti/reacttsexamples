@@ -1,0 +1,16 @@
+{
+  "name": "5-ssr-and-ssg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "dev":"next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
