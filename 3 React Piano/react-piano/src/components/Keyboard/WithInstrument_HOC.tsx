@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
-import { withInstrument } from "../../adapters/Soundfont/withInstrument";
+// import { withInstrument } from "../../adapters/Soundfont/withInstrument";
+import { withInstrument } from "../../adapters/Soundfont/withInstrumentBasedOnHook";
 import { useInstrument } from "../../state/Instrument/Context";
 import { useAudioContext } from "../AudioContextProvider/useAudioContext";
 import { Keyboard } from "./Keyboard";

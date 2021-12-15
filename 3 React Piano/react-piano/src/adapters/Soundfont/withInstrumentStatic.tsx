@@ -1,8 +1,8 @@
 import { Component, ComponentType } from "react";
-import { InstrumentName } from "soundfont-player";
-import { useAudioContext } from "../../components/AudioContextProvider/useAudioContext";
+import Soundfont,{ InstrumentName, Player } from "soundfont-player";
 import { DEFAULT_INSTRUMENT } from "../../domain/audio";
 import { MidiValue } from "../../domain/note";
+import { AudioNodesRegistry } from "../../domain/sound";
 import { Optional } from "../../domain/types";
 interface InjectedProps {
     loading: boolean,
@@ -20,19 +20,7 @@ interface ProviderState {
     current: Optional<InstrumentName>
 }
 
-// export function withInstrumentStatic<TProps extends InjectedProps = InjectedProps> (initialInstrument:InstrumentName=DEFAULT_INSTRUMENT){
-//     return function enhanceComponent(WrappedComponent:ComponentType<TProps>){
-//         const displayName= WrappedComponent.displayName || WrappedComponent.name || 'Component'
-
-//         return class WithInstrument extends Component<ProviderProps,ProviderState> {
-
-
-//         }
-//     }
-// }
-
-
-export function withInstrumentStatic<TProps extends InjectedProps = InjectedProps>(WrappedComponent: ComponentType<TProps>) {
+export function withInstrumentStatic<TProps extends InjectedProps = InjectedProps>(initialInstrument:InstrumentName = DEFAULT_INSTRUMENT) {
     return function enhanceComponent(WrappedComponent: ComponentType<TProps>) {
         const displayName = WrappedComponent.displayName || WrappedComponent.name || 'Component'
 
@@ -61,8 +49,7 @@ export function withInstrumentStatic<TProps extends InjectedProps = InjectedProp
             }
 
             public componentDidMount() {
-                const { instrument } = this.props
-                this.load(instrument)
+                this.load(initialInstrument)
             }
 
 
@@ -70,16 +57,10 @@ export function withInstrumentStatic<TProps extends InjectedProps = InjectedProp
                 return this.state.current !== instrument
             }
 
-            public componentDidUpdate({
-                instrument: prevInstrument
-            }: ProviderProps) {
-                const { instrument } = this.props
-                if (instrument && instrument != prevInstrument)
-                    this.load(instrument)
-            }
-
             private load = async (instrument: InstrumentName) => {
                 this.setState({ loading: false })
+                console.log(instrument);
+                
                 this.player = await Soundfont.instrument(this.audio, instrument)
 
                 this.setState({ loading: false, current: instrument })
