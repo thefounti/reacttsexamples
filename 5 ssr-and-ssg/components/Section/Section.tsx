@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { Grid } from "./style";
 
 interface SectionProps{
     title:string
