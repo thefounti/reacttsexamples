@@ -7,7 +7,7 @@ export default function Front() {
                 <title>Front page of the Internet</title>
             </Head>
             <main>
-                Hello World From Next
+                <Feed/>
             </main>
         </>
     )
