@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { FunctionComponent } from "react";
+import { Card, Content, Figure, Title } from "./style";
 
 export const Post: FunctionComponent = () => {
     return (
-        <Link href='/post/{id}' as='/post/example' passHref>
+        <Link href='/post/[id]' as='/post/example' passHref>
             <Card>
                 <Figure>
                     <img alt='Post photo' src='/image1.jpg'/>

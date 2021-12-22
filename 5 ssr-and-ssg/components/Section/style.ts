@@ -23,3 +23,19 @@ export const Grid=styled.div`
         }
     }
 `
+
+export const Title = styled.h2`
+  font-size: 2.8rem;
+  line-height: 1.1;
+  margin: 10px 0 15px;
+
+  @media (max-width: 800px) {
+    font-size: 2rem;
+  }
+`
+
+export const MoreLink = styled.a`
+  margin: -20px 0 30px;
+  display: inline-block;
+  vertical-align: top;
+`

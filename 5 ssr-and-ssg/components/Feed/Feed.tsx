@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react"
+import { Section } from "../Section"
 
 export const Feed:FunctionComponent = () => {
     return (

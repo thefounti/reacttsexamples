@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
-import { Grid } from "./style";
+import { Post } from "../Post";
+import { Grid, Title } from "./style";
 
 interface SectionProps{
     title:string
