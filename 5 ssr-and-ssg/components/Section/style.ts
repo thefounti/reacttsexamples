@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Grid=styled.div`
+export const Grid = styled.div`
     display:flex;
     flex-wrap:wrap;
     justify-content:space-between;
@@ -12,7 +12,7 @@ export const Grid=styled.div`
 
     &:after,
     & > * {
-        width:calc(33% - 10 px)
+        width:calc(33% - 10px);
         margin-bottom: 20px;
     }
 
@@ -22,7 +22,7 @@ export const Grid=styled.div`
             width:100%;
         }
     }
-`
+`;
 
 export const Title = styled.h2`
   font-size: 2.8rem;
@@ -32,10 +32,10 @@ export const Title = styled.h2`
   @media (max-width: 800px) {
     font-size: 2rem;
   }
-`
+`;
 
 export const MoreLink = styled.a`
   margin: -20px 0 30px;
   display: inline-block;
   vertical-align: top;
-`
+`;

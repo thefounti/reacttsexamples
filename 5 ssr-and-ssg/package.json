@@ -19,7 +19,7 @@
   "scripts": {
     "build": "next build",
     "start":"next start",
-    "serve": "ts-node -O '{\"module\":\"commonjs\"}' ./server/index.ts",
+    "serve": "ts-node -O \"{\\\"module\\\": \\\"commonjs\\\"}\" ./server/index.ts",
     "dev": "concurrently --kill-others \"yarn serve\" \"next\""
   },
   "devDependencies": {

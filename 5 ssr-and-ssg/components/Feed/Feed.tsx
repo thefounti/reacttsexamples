@@ -1,12 +1,27 @@
 import { FunctionComponent } from "react"
+import { Category, Post } from "../../shared/types"
 import { Section } from "../Section"
 
-export const Feed:FunctionComponent = () => {
+interface FeedProps {
+    posts: Post[]
+    categories: Category[]
+}
+
+export const Feed: FunctionComponent<FeedProps> = ({ posts, categories }) => {
     return (
         <>
-        <Section title="Science"/>
-        <Section title="Technology"/>
-        <Section title="Arts"/>
+            {categories.map((currentCategory) => {
+                const inSection = posts.filter(
+                    (post) => post.category === currentCategory
+                )
+                return (
+                    <Section
+                        key={currentCategory}
+                        title={currentCategory}
+                        posts={inSection}
+                    />
+                )
+            })}
         </>
     )
 }
