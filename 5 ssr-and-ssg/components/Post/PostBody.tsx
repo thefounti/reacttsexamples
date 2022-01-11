@@ -2,6 +2,7 @@ import { FunctionComponent } from "react";
 import Link from "next/link";
 import { Post } from "../../shared/types";
 import { Content, Figure, Meta, Title } from "./PostBodyStyle";
+import { Breadcrumbs } from "../Breadcrumbs/Breadcrumbs";
 
 interface PostBodyProps {
     post: Post
@@ -10,6 +11,7 @@ interface PostBodyProps {
 export const PostBody: FunctionComponent<PostBodyProps> = ({ post }) => {
     return (
         <div>
+            <Breadcrumbs post={post} />
             <Title>{post.title}</Title>
             <Figure>
                 <img src={post.image} alt={post.title} />
