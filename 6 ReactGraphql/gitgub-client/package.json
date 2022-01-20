@@ -1,0 +1,16 @@
+{
+  "name": "gitgub-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node --inspect src/index.tsx --extensions \".js,.ts,.jsx,.tsx,\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-node": "^0.0.1-security"
+  }
+}

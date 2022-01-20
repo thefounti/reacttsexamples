@@ -33,3 +33,7 @@ yarn-debug.log*
 yarn-error.log*
 
 5 ssr-and-ssg/build/
+
+6 ReactGraphql/gitgub-client/node_modules/
+
+6 ReactGraphql/gitgub-client/yarn.lock
